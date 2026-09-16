@@ -1,32 +1,26 @@
-# React + TypeScript + Vite
+# Advanced RAG Explorer (OnGoing)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Welcome to the **Advanced RAG Explorer** — a comprehensive, interactive platform designed to visualize, explain, and explore the complexities of modern Retrieval-Augmented Generation (RAG) architectures.
 
-Currently, two official plugins are available:
+## About the Platform
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+As enterprise AI systems scale, basic RAG implementations are often insufficient for complex workflows, massive datasets, and demanding latency requirements. The Advanced RAG Explorer serves as a visual guide and educational tool for AI architects, data engineers, and developers looking to understand the next generation of agentic RAG systems.
 
-## React Compiler
+### Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Adaptive Generator Visualization:** Explore how dynamic generation engines synthesize and evaluate retrieved context in real-time.
+- **Concept Flow Diagrams:** Interactive visual architectures that break down complex data ingestion, retrieval, and reranking pipelines.
+- **Advanced Chunking Strategies:** Understand semantic and structural chunking methods essential for high-fidelity retrieval.
+- **SOTA Models Overview:** A curated breakdown of state-of-the-art foundation models, embedding models, and cross-encoders.
+- **Tech Stack Matrix:** Compare and evaluate the modern data stack for vector databases, orchestration layers, and deployment infrastructure.
+- **Interview QA:** Deep-dive scenarios and architectural questions to test your knowledge on scaling RAG to production.
 
-## Expanding the Oxlint configuration
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+## Tech Stack
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+- **Framework:** React 19 + Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Diagramming:** React Flow
