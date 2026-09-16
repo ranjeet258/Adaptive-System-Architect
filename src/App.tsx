@@ -3,6 +3,7 @@ import SOTAModels from './components/SOTAModels';
 import TechStackMatrix from './components/TechStackMatrix';
 import AdaptiveGenerator from './components/AdaptiveGenerator';
 import ConceptFlow from './components/ConceptFlow';
+import InterviewQuestions from './components/InterviewQuestions';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <a href="#components" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Components</a>
           <a href="#models" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">SOTA Models</a>
           <a href="#tech" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Tech Stack</a>
+          <a href="#interview-questions" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Interview QA</a>
         </nav>
       </header>
       
@@ -46,6 +48,10 @@ function App() {
 
           <div id="tech">
             <TechStackMatrix />
+          </div>
+
+          <div id="interview-questions-section">
+            <InterviewQuestions />
           </div>
         </section>
       </main>
