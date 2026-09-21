@@ -1,10 +1,10 @@
-# Advanced RAG Explorer (OnGoing)
+# AI System Design
 
-Welcome to the **Advanced RAG Explorer** — a comprehensive, interactive platform designed to visualize, explain, and explore the complexities of modern Retrieval-Augmented Generation (RAG) architectures.
+Welcome to the **AI System Design** platform — a comprehensive, interactive platform designed to visualize, explain, and explore the complexities of modern Retrieval-Augmented Generation (RAG) architectures.
 
 ## About the Platform
 
-As enterprise AI systems scale, basic RAG implementations are often insufficient for complex workflows, massive datasets, and demanding latency requirements. The Advanced RAG Explorer serves as a visual guide and educational tool for AI architects, data engineers, and developers looking to understand the next generation of agentic RAG systems.
+As enterprise AI systems scale, basic RAG implementations are often insufficient for complex workflows, massive datasets, and demanding latency requirements. The AI System Design platform serves as a visual guide and educational tool for AI architects, data engineers, and developers looking to understand the next generation of agentic RAG systems.
 
 ### Key Features
 

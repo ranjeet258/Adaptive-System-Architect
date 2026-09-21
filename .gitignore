@@ -22,3 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# cd "c:/Users/ranje/OneDrive/Desktop/Agentic RAG/agentic-rag-explainer"
+# npm run devclear
