@@ -23,4 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 # cd "c:/Users/ranje/OneDrive/Desktop/Agentic RAG/agentic-rag-explainer"
-# npm run devclear
+# npm run dev
+
+# Local tool caches
+.serena/

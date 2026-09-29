@@ -6,29 +6,46 @@ import AdaptiveGenerator from './components/AdaptiveGenerator';
 import ConceptFlow from './components/ConceptFlow';
 import InterviewQuestions from './components/InterviewQuestions';
 import AgentArchitectures from './components/AgentArchitectures';
+import SoftwareSystemArchitect from './components/SoftwareSystemArchitect';
+import AgentOrchestrationArchitect from './components/AgentOrchestrationArchitect';
+
+type View = 'main' | 'agents' | 'software' | 'agent-designer';
 
 function App() {
-  const [showAgentArchitectures, setShowAgentArchitectures] = useState(false);
+  const [view, setView] = useState<View>('main');
+  const toggleView = (v: View) => setView(prev => (prev === v ? 'main' : v));
 
   return (
     <div className="bg-slate-50 flex flex-col font-sans text-slate-900 overflow-x-hidden min-h-screen">
       <header className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between sticky top-0 z-50 shadow-sm" style={{ height: '90px' }}>
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-lg cursor-pointer" onClick={() => setShowAgentArchitectures(false)}>
+          <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-lg cursor-pointer" onClick={() => setView('main')}>
             A
           </div>
-          <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 cursor-pointer" onClick={() => setShowAgentArchitectures(false)}>
+          <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 cursor-pointer" onClick={() => setView('main')}>
             AI System Design
           </h1>
         </div>
-        <nav className="hidden md:flex gap-6 items-center">
+        <nav className="hidden md:flex gap-4 items-center">
           <button 
-            onClick={() => setShowAgentArchitectures(!showAgentArchitectures)}
+            onClick={() => toggleView('software')}
+            className="px-4 py-2 bg-purple-600 text-white rounded-lg font-bold hover:bg-purple-700 transition-colors shadow-sm"
+          >
+            {view === 'software' ? 'Back to Main' : 'Software Architect'}
+          </button>
+          <button
+            onClick={() => toggleView('agent-designer')}
+            className="px-4 py-2 bg-violet-600 text-white rounded-lg font-bold hover:bg-violet-700 transition-colors shadow-sm"
+          >
+            {view === 'agent-designer' ? 'Back to Main' : 'Agent Designer'}
+          </button>
+          <button 
+            onClick={() => toggleView('agents')}
             className="px-4 py-2 bg-indigo-600 text-white rounded-lg font-bold hover:bg-indigo-700 transition-colors shadow-sm"
           >
-            {showAgentArchitectures ? 'Back to Main' : 'Agent Architectures'}
+            {view === 'agents' ? 'Back to Main' : 'Agent Architectures'}
           </button>
-          {!showAgentArchitectures && (
+          {view === 'main' && (
             <>
               <a href="#adaptive" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Adaptive Generator</a>
               <a href="#concept-flow" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Concept Flow</a>
@@ -42,9 +59,17 @@ function App() {
       </header>
       
       <main className="flex-1 flex flex-col w-full">
-        {showAgentArchitectures ? (
+        {view === 'agents' ? (
           <section className="w-full flex" style={{ height: 'calc(100vh - 90px)' }}>
             <AgentArchitectures />
+          </section>
+        ) : view === 'software' ? (
+          <section className="w-full flex" style={{ height: 'calc(100vh - 90px)' }}>
+            <SoftwareSystemArchitect />
+          </section>
+        ) : view === 'agent-designer' ? (
+          <section className="w-full flex" style={{ height: 'calc(100vh - 90px)' }}>
+            <AgentOrchestrationArchitect />
           </section>
         ) : (
           <>
